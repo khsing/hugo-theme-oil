@@ -2,19 +2,19 @@
 <div id="disqus_thread"></div>
 <script>
     /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT
+     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR
      *  PLATFORM OR CMS.
-     *  
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+     *
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
      *  https://disqus.com/admin/universalcode/#configuration-variables
      */
     var disqus_config = function () {
         // Replace PAGE_URL with your page's canonical URL variable
-        this.page.url = '{{ .RelPermalink }}';  
-        
+        this.page.url = '{{ .RelPermalink }}';
+
         // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        this.page.identifier = '{{ .RelPermalink }}'; 
+        this.page.identifier = '{{ .RelPermalink }}';
     };
     (function() {
         var d = document, s = d.createElement('script');
@@ -36,12 +36,12 @@
 </div>
 <script type="text/javascript">
     (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-      if (typeof LivereTower === 'function') { return; }
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-      e.parentNode.insertBefore(j, e);
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
     })(document, 'script');
 </script>
 {{ end }}
@@ -65,7 +65,7 @@ twikoo.init({
         //path: location.pathname,
         serverURL: {{.Site.Params.walineServer}} ,
     });
-    
+
     </script>
 {{ end }}
 

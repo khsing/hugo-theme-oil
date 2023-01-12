@@ -13,7 +13,7 @@
                                 {{.Title}}
                             </div>
                             <div class="post-item-summary">
-                                {{.Description}}
+                                {{.Summary}}……
                             </div>
                             {{ partial "post-item-meta.html" . }}
                         </div>
@@ -26,7 +26,7 @@
                                 {{ $thumbnail := $image.Resize "690x360" }}
                                  style="background-image: url('{{ $thumbnail.RelPermalink }}')"
                             {{ else }}
-                            
+
                                 style="background-image: url('{{ $featured_image | absURL}}')"
                             {{ end }}
                             ></div>

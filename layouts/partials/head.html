@@ -36,7 +36,7 @@
 {{if .Site.Params.manifest}}
 <link rel="manifest" href="{{.Site.Params.manifest}}">
 {{end}}
-  
+
 {{if .Params.canonicalUrl}}
 <link rel="canonical" href="{{.Params.canonicalUrl}}" />
 {{end}}
@@ -154,6 +154,9 @@
     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
 {{ end }}
+
+<!-- katex -->
+{{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
 
 <!-- head custom -->
 {{- partial "extended_head.html" . }}
