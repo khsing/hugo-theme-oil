@@ -34,7 +34,7 @@
 
                         {{ if .Params.categories }}
                             <i class="material-icons" style="">folder</i>
-                                <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
+                                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ .Params.categories }}</a>
                                 &nbsp;
                         {{ end }}
 
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="post-body-wrapper">
                 {{ if .Params.enableVue }}
                 <div class="post-body">
@@ -74,8 +74,8 @@
                     {{ end }}
                 </div>
             </div>
-            
-            
+
+
             <nav class="post-pagination">
 
                 {{if .Next}}
@@ -87,7 +87,7 @@
 			{{ i18n "next_link" }}<br>{{ i18n "no_newer_posts"}}
                 </a>
                 {{end}}
-                
+
                 {{if .Prev}}
                 <a class="older-posts" href="{{.Prev.RelPermalink}}">
 			{{ i18n "prev_link" }}<br>{{.Prev.Title}}
